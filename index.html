@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan 2027 — Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="bg"></div>
+
+    <main class="container">
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="logo-mark" aria-hidden="true">
+                    <!-- Crescent Moon SVG -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+                <span class="logo-word">Ramadan Kareem</span>
+            </div>
+
+            <nav class="socials" aria-label="Social links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="badge">
+                <span class="pulse"></span>
+                Status — Awaiting the Crescent
+            </div>
+
+            <h1>Prepare for the Blessed Month.</h1>
+            <p>Ramadan is a time of reflection, devotion, and community. Join our mailing list to receive gentle reminders and notifications when the holy month officially begins.</p>
+        </section>
+
+        <div class="signal" aria-hidden="true">
+            <svg viewBox="0 0 600 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="signal-path" d="M0 20C40 20 40 4 80 4C120 4 120 36 160 36C200 36 200 8 240 8C280 8 280 30 320 30C360 30 360 12 400 12C440 12 440 28 480 28C520 28 520 20 560 20C580 20 590 20 600 20"
+                      stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <section class="countdown" aria-label="Time remaining until Ramadan">
+            <div class="time-block">
+                <span class="time-value" id="days">00</span>
+                <span class="time-label">Days</span>
+            </div>
+
+            <span class="divider" aria-hidden="true"></span>
+
+            <div class="time-block">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">Hrs</span>
+            </div>
+
+            <span class="divider" aria-hidden="true"></span>
+
+            <div class="time-block">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">Min</span>
+            </div>
+
+            <span class="divider" aria-hidden="true"></span>
+
+            <div class="time-block">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">Sec</span>
+            </div>
+        </section>
+
+        <form class="email-form" id="email-form" novalidate>
+            <label class="sr-only" for="email-input">Email address</label>
+            <div class="input-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input id="email-input" type="email" placeholder="your.name@example.com" required/>
+            </div>
+
+            <button type="submit">
+                Notify me
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <p class="fine-print">No spam. Just peaceful reminders for the holy month.</p>
+
+        <div class="success-message hidden" id="success">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Alhamdulillah! You're on the list. We'll email you soon.</span>
+        </div>
+
+        <div class="error-message hidden" id="error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Please enter a valid email address.</span>
+        </div>
+    </main>
+</body>
+</html>
